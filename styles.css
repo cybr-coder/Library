@@ -1,0 +1,36 @@
+h1 {
+    text-align: center;
+}
+.book-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.book-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1rem;
+    width: 200px;
+    background-color: #f9f9f9;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    
+}
+
+.book-card h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    line-height: 1.3;
+    height: 2.6rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
+}
+
+.book-card p {
+    margin: 0.2rem 0;
+    font-size: 0.9rem;
+}
