@@ -9,6 +9,22 @@
 </head>
 <body>
     <h1>Library</h1>
+      <button id="openFormBtn">➕ New Book</button>
+
+    <div id="formModal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-btn" id="closeFormBtn">&times;</span>
+                <h2>Add a New Book</h2>
+            <form id="bookForm">
+                <label>Title: <input type="text" name="title" required /></label>
+                <label>Author: <input type="text" name="author" required /></label>
+                <label>Pages: <input type="number" name="pages" required min="1" /></label>
+                <label>Read: <input type="checkbox" name="read" /></label>
+                <button type="submit">Add Book</button>
+            </form>
+        </div>
+    </div>
+
     <div id="bookList" class = "book-container"></div>
 </body>
 </html>
