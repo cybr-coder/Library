@@ -1,4 +1,9 @@
 const myLibrary = [];
+const addBookBtn = document.getElementById("openFormBtn");
+const dialog = document.getElementById("dialog");
+const newCard = document.getElementById("submit");
+
+
 
 function Book(title, author, pages, read) {
     this.title = title;
@@ -11,12 +16,21 @@ function Book(title, author, pages, read) {
         const readStatus = this.read ? "already read" : "not read yet";
         return `${this.title} by ${this.author}, ${this.pages} pages, ${readStatus}`;
     };
-}
+};
 
 function addBookToLibrary(title, author, pages) {
     const newBook = new Book(title, author, pages);
     myLibrary.push(newBook);
-}
+};
+
+
+addBookBtn.addEventListener ("click", () => {
+    dialog.showModal();
+});
+
+newCard.addEventListener ("click", () => {
+    addBookToLibrary();
+})
 
 function displayBooks() {
     const bookList = document.getElementById('bookList');
@@ -33,7 +47,7 @@ function displayBooks() {
         `;
         bookList.appendChild(card);
     });
-}
+};
 
 
 addBookToLibrary("To Kill a Mockingbird", "Harper Lee", 1960);
